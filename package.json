@@ -1,0 +1,15 @@
+{
+  "name": "pairer-service",
+  "version": "1.0.0",
+  "description": "a pairer micro-service for slack integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "micro"
+  },
+  "author": "Jack Thibaut",
+  "license": "MIT",
+  "dependencies": {
+    "micro": "^9.3.2"
+  }
+}
