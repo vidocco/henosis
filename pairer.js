@@ -6,11 +6,13 @@ const write = promisify(fs.writeFile)
 const pairs = async (input, output = './previous.json') => {
   if (!input) return new Error('missing input data')
 
-  const { seniors, juniors } = input
+  const { seniors, juniors, r } = input
 
   if (!seniors || !juniors) {
     return new Error('missing a group to pair with')
   }
+
+  if (r) await write('./previous.json', '')
 
   let division, color, iteratee, opposite
   const junLen = juniors.length
